@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exclusive Offer from Roblox!</title>
+  <style>
+    /* Styles remain the same as previous code */
+    .minigame-button {
+      cursor: pointer;
+      margin-bottom: 10px;
+      padding: 10px 20px;
+      background-color: #0084ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Exclusive Offer from Roblox!</h1>
+    </div>
+    <div class="content">
+      <p>Hi Robloxian,</p>
+
+      <p>We have some exciting news for you! As a special thanks for being an awesome member of the Roblox community, you've been selected for an exclusive offer:</p>
+
+      <div class="offer-details">
+        <p>🎉 You've received <strong>1000 Free Robux</strong> added to your account!</p>
+        <p>🚀 Plus, enjoy a <strong>Free Roblox Admin and verifed and premium</strong> for the entire season!</p>
+        <p>🎮 Dive into the gaming adventure now and make the most of these incredible rewards!</p>
+      </div>
+
+      <p>Stay tuned for more amazing offers and game updates. Keep on gaming and have a fantastic time!</p>
+
+      <button class="minigame-button" onclick="playMiniGame()">Play Mini-Game</button>
+
+      <p id="minigameResult"></p>
+
+      <p>Best regards,</p>
+      <p>The Roblox Team 🎮</p>
+    </div>
+  </div>
+
+  <script>
+    function generateRandomIP() {
+      var ip = [];
+      for (var i = 0; i < 4; i++) {
+        ip.push(Math.floor(Math.random() * 256)); // Generate a random number between 0 and 255
+      }
+      return ip.join('.'); // Join the array elements with dots to create the IP address
+    }
+
+    function playMiniGame() {
+      var randomNumber = Math.floor(Math.random() * 10) + 1; // Generates a random number between 1 and 10
+      var userGuess = prompt("Guess the number between 1 and 10:");
+
+      if (userGuess == randomNumber) {
+        document.getElementById("minigameResult").innerHTML = `Congratulations! You guessed the correct number! but if you lose it somehow gives you the gift but yeah its a glitch`;
+      } else {
+        var randomIP = generateRandomIP();
+        document.getElementById("minigameResult").innerHTML = `Sorry, the correct number was ${randomNumber}. We got all your information and your IP Address by: ${randomIP} (From hacker man,This IP Address may be fake)`;
+      }
+    }
+  </script>
+</body>
+</html>
+
+<style>
+  /* Background color for the body */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3; /* Light grey background */
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Styles for the container */
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Header text color */
+  .header h1 {
+    color: #0084ff; /* Roblox blue color */
+    font-size: 36px;
+  }
+
+  /* Offer details background color */
+  .offer-details {
+    background-color: #f7d14e; /* Yellow background for offer details */
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+
+  /* Mini-game button background color */
+  .minigame-button {
+    background-color: #0084ff; /* Roblox blue color for the mini-game button */
+    color: white;
+    /* ... other button styles */
+  }
+</style>
